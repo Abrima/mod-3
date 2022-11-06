@@ -50,13 +50,17 @@ var countries = [
 
 for (var index = 0; index < 12; index++) {
     cities[index];
-    }
+}
 
 
 // Step 2
 
 for (var index = 0; index < 12; index++) {
+    if (cities[index] === "???" || countries[index] === "???") {
+        index++;
+    }
     console.log(cities[index], ", ", countries[index]);
+
 }
 
 
@@ -64,8 +68,9 @@ for (var index = 0; index < 12; index++) {
 
 for (var index = 0; index < 12; index++) {
     if (cities[index] === "???" || countries[index] === "???") {
-        cities[index] = 'Oops!';
-        countries[index] = 'Oops!';
+        console.log("Oops!");
     }
-    console.log(cities[index], ", ", countries[index]);
+    else {
+        console.log(cities[index], ", ", countries[index]);
+    }
 }
